@@ -1,4 +1,4 @@
-class Calculation
+class Zshape
 {
   public static void main(String args[]) 
   {
