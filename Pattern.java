@@ -4,6 +4,7 @@ class Menu
 {
    public static void main(String[] args)
    {
+     
       int choice = 0;
       int[] a = new int[5];
       Scanner s = new Scanner(System.in);
@@ -17,28 +18,31 @@ class Menu
             System.out.println("1. Add");
             System.out.println("2. Alternate Add");
        choice= s.nextInt();  
-       if (choice == 1)
+       switch (choice)
        {
-        int sum=0;
+        case 1:
+        
+        System.out.print("Sum of all : ");
+        int sum = 0;
         for(int i=0;i<a.length;i++)
         {
+         
          sum += a[i];
         }
          System.out.println(sum);
-       }
-       else
-       {
-        int jam=0;
-        for(int i=0;i<a.length;i++)
- 
-        {
-         if(i % 2 != 0)
-         {
-         jam += a[i];
+        break;
         
-         }
-          System.out.println(jam);
+        case 2:
+        {
+        System.out.print("Sum of alternate : ");
+        int jam=0;
+        for(int i=0;i<a.length;i=i+2)
+        {
+         jam += a[i];
         }
-       }
-}
+        System.out.println(jam);
+        break;
+        }
+        }
+     }
 }
