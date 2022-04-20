@@ -1,16 +1,26 @@
-class Student
+class Triangle
 {
-  String name;
-  int roll_no;
-}
-
-class Main
-{
-  public static void main(String args[])
+  int a,b,c;
+  public double getArea()
   {
-    Student s = new Student();
-    s.name = "John";
-    s.roll_no = 2;
-    System.out.println("Name is "+s.name+" and roll number is "+s.roll_no);
+    double s = (a+b+c)/2.0;
+    return Math.pow((s*(s-a)*(s-b)*(s-c)),.5);
+  }
+  public double getPerimeter()
+  {
+    return (a+b+c)/2.0;
   }
 }
+
+class Time
+{
+  public static void main(String[] args)
+  {
+    Triangle t = new Triangle();
+    t.a = 2;
+    t.b = 5;
+    t.c = 6;
+    System.out.println(t.getArea());
+    System.out.println(t.getPerimeter());
+  }
+}	
