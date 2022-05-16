@@ -19,10 +19,15 @@ class Menu
       System.out.println("2. Total even number");
       System.out.println("N: Exit");
       char choice = sc.next().charAt(0);
-      switch(choice)
+      do{
+      
+
+             switch(choice)
       {
        case '1':
-       {  
+       { 
+
+ 
         for(int i = 0; i<n; i++ )
          {
           for(int j = i+1; j<n; j++)
@@ -52,15 +57,19 @@ class Menu
          System.out.println(even);  
          break;
         }
-       case 'n':
-       case 'N':
-       {
-        break;
-       } 
+        
+       default:{
+        System.out.println("Enter a valid choice");
+        
+        }// default close 
+     
+     }// switch close
+    System.out.println("1. Second largest");
+      System.out.println("2. Total even number ");
+      System.out.println("N: Exit");
+choice = sc.next().charAt(0);
        
      
-     }
-     
+     }while(choice!='N');
   }
-  
 }
